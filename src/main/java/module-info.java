@@ -13,4 +13,6 @@ module co.edu.uniquindio.poo.templatemetthod {
 
     opens co.edu.uniquindio.poo.templatemetthod to javafx.fxml;
     exports co.edu.uniquindio.poo.templatemetthod;
+    exports co.edu.uniquindio.poo.templatemetthod.Controllers;
+    opens co.edu.uniquindio.poo.templatemetthod.Controllers to javafx.fxml;
 }

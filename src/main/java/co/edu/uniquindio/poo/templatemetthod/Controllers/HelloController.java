@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.templatemetthod;
+package co.edu.uniquindio.poo.templatemetthod.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
