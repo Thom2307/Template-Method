@@ -1,13 +1,23 @@
 package co.edu.uniquindio.poo.templatemetthod;
 
-class Caballero extends Juego {
+public class Caballero extends Juego {
     @Override
     protected void matarDragon() {
-        System.out.println("El caballero mata al dragón con su espada.");
+        agregarAccion("El caballero mata al dragón con su espada.");
     }
 
     @Override
     protected void salvarPrincesa() {
-        System.out.println("El caballero salva a la princesa y se casa con ella.");
+        agregarAccion("El caballero salva a la princesa y se casa con ella.");
+    }
+
+    @Override
+    public String getNombre() {
+        return "Caballero";
+    }
+
+    @Override
+    public String getRutaImagen() {
+        return "/co/edu/uniquindio/poo/templatemetthod/imagenes/caballero.jpg";
     }
 }

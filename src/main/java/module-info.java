@@ -10,6 +10,7 @@ module co.edu.uniquindio.poo.templatemetthod {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
 
     opens co.edu.uniquindio.poo.templatemetthod to javafx.fxml;
     exports co.edu.uniquindio.poo.templatemetthod;

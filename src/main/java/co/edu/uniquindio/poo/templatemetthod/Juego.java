@@ -1,25 +1,36 @@
 package co.edu.uniquindio.poo.templatemetthod;
 
-// Clase abstracta que define el "template"
-abstract class Juego {
+import java.util.ArrayList;
+import java.util.List;
 
-    // Método template (define el algoritmo general)
-    public final void jugar() {
-        entrarCueva();       // Paso fijo
-        matarDragon();       // Paso abstracto (cada subclase lo define)
-        salvarPrincesa();    // Hook (opcional)
+public abstract class Juego {
+
+    private List<String> acciones = new ArrayList<>();
+
+    public final List<String> jugar() {
+        acciones.clear();
+        entrarCueva();
+        matarDragon();
+        salvarPrincesa();
+        return new ArrayList<>(acciones);
     }
 
-    // Paso fijo
     private void entrarCueva() {
-        System.out.println("El héroe entra en la cueva.");
+        String mensaje = "El héroe entra en la cueva.";
+        agregarAccion(mensaje);
     }
 
-    // Paso abstracto (cada personaje lo hace distinto)
     protected abstract void matarDragon();
 
-    // Hook (opcional — por defecto no hace nada)
     protected void salvarPrincesa() {
-        // vacío: las subclases pueden sobrescribirlo si quieren
     }
+
+    protected void agregarAccion(String accion) {
+        acciones.add(accion);
+        System.out.println(accion);
+    }
+
+    public abstract String getNombre();
+
+    public abstract String getRutaImagen();
 }

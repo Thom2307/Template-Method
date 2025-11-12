@@ -1,10 +1,19 @@
 package co.edu.uniquindio.poo.templatemetthod;
 
-class Mago extends Juego {
+public class Mago extends Juego {
+    
     @Override
     protected void matarDragon() {
-        System.out.println("El mago destruye al dragón con un poderoso hechizo.");
+        agregarAccion("El mago destruye al dragón con un poderoso hechizo.");
     }
 
-    // No sobrescribe salvarPrincesa(), porque no le importa
+    @Override
+    public String getNombre() {
+        return "Mago";
+    }
+
+    @Override
+    public String getRutaImagen() {
+        return "/co/edu/uniquindio/poo/templatemetthod/imagenes/mago.jpg";
+    }
 }
